@@ -83,7 +83,7 @@ const Authentication = () => {
               />
             </FormControl>
           </CardContent>
-          <CardActions>
+          <CardActions sx= {{justifyContent: "center"}}>
             <Button>Ingresar</Button>
           </CardActions>
         </Card>
