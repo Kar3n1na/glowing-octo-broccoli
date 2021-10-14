@@ -1,9 +1,10 @@
 import React from 'react'
+import Authentication from './components/Authentication'
 
 const App = () => {
   return (
     <div>
-      <h1>Working</h1>
+      <Authentication/>
     </div>
   )
 }
