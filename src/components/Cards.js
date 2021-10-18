@@ -1,4 +1,4 @@
-import { Card, CardContent, Typography } from "@material-ui/core";
+import { Card, CardContent, makeStyles, Typography } from "@material-ui/core";
 import React from "react";
 
 const useStyles = makeStyles(() => ({
@@ -17,7 +17,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-const Cards = () => {
+const Cards = (props) => {
   const classes = useStyles();
 
   return (

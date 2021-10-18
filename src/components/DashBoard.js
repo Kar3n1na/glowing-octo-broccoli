@@ -8,6 +8,8 @@ import { YouTube } from "@mui/icons-material";
 import { Public } from "@mui/icons-material";
 import { Videocam } from "@mui/icons-material";
 import CardsHeader from "./CardsHeader";
+import Cards from "./Cards";
+import { grid } from "@mui/system";
 //import giphyLOTR from '../assets/giphyLOTR.gif'
 
 const useStyles = makeStyles(() => ({
@@ -17,6 +19,10 @@ const useStyles = makeStyles(() => ({
   icons: {
     color: "white",
   },
+  container: {
+    paddingTop: 40,
+    alignItems: "center"
+  }
 }));
 
 const DashBoard = (props) => {
@@ -24,9 +30,11 @@ const DashBoard = (props) => {
   return (
     <div className={classes.root}>
       <Grid container spacing={3}>
+
         <Grid item xs={12}>
           <NavBar />
         </Grid>
+
         <Grid item xs={12} sm={4} lg={4} xl={4}>
           <CardsHeader
             icons={<YouTube className={classes.icons} />}
@@ -54,15 +62,26 @@ const DashBoard = (props) => {
             font="white"
           />
         </Grid>
-        <Grid item xs={12} sm={6} md={6} xl={6}>
+
+        <Grid container spacing={1} className={classes.container} xs={12} sm={12} lg={6} xl={6} >
+          
+          <Grid item xs={12} sm={6} md={6} xl={6}>
+            <Cards title="Suscriptions" text="Numero Random" />
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={6} xl={6}>
+            <Cards title="Suscriptions" text="Numero Random" />
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={6} xl={6}>
+            <Cards title="Suscriptions" text="Numero Random" />
+          </Grid>
+
+          <Grid item xs={12} sm={6} md={6} xl={6}>
+            <Cards title="Suscriptions" text="Numero Random" />
+          </Grid>
 
         </Grid>
-        <Grid item xs={12} sm={6} md={6} xl={6}>
-
-</Grid>
-<Grid item xs={12} sm={6} md={6} xl={6}>
-
-</Grid>
       </Grid>
     </div>
   );
