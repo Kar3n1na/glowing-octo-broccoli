@@ -16,6 +16,7 @@ import {
   Typography,
 } from "@mui/material";
 import { Visibility, VisibilityOff } from "@mui/icons-material";
+import { useHistory } from "react-router-dom";
 
 const Authentication = () => {
     const [password, setPassword] = useState({
@@ -26,6 +27,8 @@ const Authentication = () => {
     const ShowPasswordToggler = () => {
       setPassword({ ...password, show: !password.show });
     };
+
+    let history = useHistory()
   
     return (
       <Container
@@ -84,7 +87,7 @@ const Authentication = () => {
             </FormControl>
           </CardContent>
           <CardActions sx= {{justifyContent: "center"}}>
-            <Button>Ingresar</Button>
+            <Button onClick={() => {history.push("/dashboard")}} >Ingresar</Button>
           </CardActions>
         </Card>
         <Typography
