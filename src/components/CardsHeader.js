@@ -2,7 +2,7 @@
 import { Card, CardContent, makeStyles, Typography } from '@material-ui/core';
 import React from 'react'
 
-const CardsHeader = () => {
+const CardsHeader = (props) => {
 
     const useStyles = makeStyles(() => ({
         root: {
@@ -20,10 +20,12 @@ const CardsHeader = () => {
         }
       }));
 
+      const classes = useStyles();
+
     return (
  <Card className={classes.root}>
      <CardContent>
-         {props.icon}
+         {props.icons}
          <Typography className={classes.title}>
             {props.title}
          </Typography>
