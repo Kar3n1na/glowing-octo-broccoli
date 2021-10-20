@@ -18,7 +18,7 @@ import {
 import { Visibility, VisibilityOff } from "@mui/icons-material";
 import { useHistory } from "react-router-dom";
 
-const Authentication = () => {
+const Login = () => {
     const [password, setPassword] = useState({
       value: "",
       show: false,
@@ -99,5 +99,5 @@ const Authentication = () => {
       </Container>
     );
   };
-  export default Authentication;
+  export default Login;
   
